@@ -1,0 +1,25 @@
+Build a modern, highly dynamic, and visually stunning website for a creative Communication & Digital Agency. 
+
+The website must feel premium, innovative, and smooth, showcasing top-tier UI/UX capabilities.
+
+### Tech Stack
+- Frontend: React (Vite) + TypeScript
+- Styling: Tailwind CSS
+- Icons: Lucide React
+- Animations: Framer Motion (for smooth scroll animations, hero transitions, and micro-interactions)
+
+### Pages & Structure to Include:
+1. **Navigation**: Sticky glassmorphic navbar with smooth scroll links and a Light/Dark mode toggle.
+2. **Hero Section**: Bold typography, an interactive layout, a catchy value proposition, dynamic text animations (typing or fading keywords), and a prominent "Let's Talk" CTA.
+3. **Portfolio**: A dynamic grid filterable by category (Branding, Digital, Social Media, UI/UX). Each project card should have a sleek hover effect showing the client name and project type.
+4. **Services**: A modern interactive grid or accordion showcasing agency expertise with clean icons and subtle hover animations.
+5. **About / Team**: A section presenting the agency's philosophy with interactive, sleek profile cards for the team members.
+6. **Interactive AI Briefing Form (Contact)**: Instead of a boring contact form, create a fun, interactive "Project Brief Generator". A step-by-step form (Goals -> Budget -> Timeline) that summarizes the user's needs dynamically as they fill it out.
+
+### Design & UX Requirements:
+- **Design System**: Modern, clean layout with generous whitespace. Dark mode by default, but fully supporting a flawless Light mode switch. Use a vibrant accent color (like neon purple, electric blue, or cyber green) against a deep background.
+- **Micro-interactions**: Subtle hover states on all buttons, cards, and interactive elements.
+- **Framer Motion**: Use `framer-motion` for reveal-on-scroll animations and smooth page/tab transitions.
+- **Responsiveness**: Fully responsive from mobile screens to large desktop monitors.
+
+Please generate the complete codebase with clean architecture and component separation.
