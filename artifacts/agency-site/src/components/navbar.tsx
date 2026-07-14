@@ -45,7 +45,7 @@ export function Navbar() {
             <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
               <div className="w-3 h-3 bg-background rounded-sm rotate-45" />
             </div>
-            <span className="heading-wavy text-xl tracking-tight">AURORA</span>
+            <span className="heading-wavy text-xl tracking-tight">JRC DIGIT</span>
           </Link>
 
           {/* Desktop Nav */}

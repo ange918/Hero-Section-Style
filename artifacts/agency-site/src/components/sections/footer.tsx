@@ -10,7 +10,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
                 <div className="w-3 h-3 bg-background rounded-sm rotate-45" />
               </div>
-              <span className="heading-wavy text-2xl tracking-tight">AURORA</span>
+              <span className="heading-wavy text-2xl tracking-tight">JRC DIGIT</span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
               A fiercely modern creative agency building premium digital experiences for brands that refuse to blend in.
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Aurora Digital Agency. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} JRC Digit. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
