@@ -31,7 +31,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-hero font-semibold text-white uppercase leading-[1.05] tracking-tight mb-8 max-w-[1200px]"
+          className="text-[clamp(1.75rem,8vw,7rem)] font-hero font-semibold text-white uppercase leading-[1.05] tracking-tight mb-8 max-w-full md:max-w-[1200px] break-words"
         >
           Designing the <br className="hidden md:block" />
           Unforgettable
