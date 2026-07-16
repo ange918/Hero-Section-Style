@@ -22,8 +22,8 @@ export function Home() {
         <Testimonials />
         <Team />
         <FAQ />
-        <ContactGenerator />
         <CTA />
+        <ContactGenerator />
         <Footer />
       </div>
     </div>
