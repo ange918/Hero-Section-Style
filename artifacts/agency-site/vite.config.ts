@@ -5,13 +5,11 @@ import { defineConfig } from 'vite';
 
 import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
 
-const rawPort = process.env.PORT;
-
-if (!rawPort) {
-  throw new Error(
-    'PORT environment variable is required but was not provided.',
-  );
-}
+// PORT / BASE_PATH are provided by the Replit runtime during development.
+// For standalone/CI/Vercel production builds they may be absent, so fall back
+// to sensible defaults (dev server port 5173, root base path) instead of
+// failing the build. Any explicitly provided value is still validated.
+const rawPort = process.env.PORT ?? '5173';
 
 const port = Number(rawPort);
 
@@ -19,13 +17,7 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    'BASE_PATH environment variable is required but was not provided.',
-  );
-}
+const basePath = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
   base: basePath,
