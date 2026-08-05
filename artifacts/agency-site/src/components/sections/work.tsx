@@ -63,7 +63,7 @@ export function Work() {
   );
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-secondary/40">
+    <section id="work" className="py-16 sm:py-20 md:py-32 bg-secondary/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>

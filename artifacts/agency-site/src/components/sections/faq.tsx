@@ -34,7 +34,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="faq" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 max-w-3xl relative z-10">
         <div className="text-center mb-16">
           <motion.h2

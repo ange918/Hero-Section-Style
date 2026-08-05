@@ -62,7 +62,7 @@ export function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2

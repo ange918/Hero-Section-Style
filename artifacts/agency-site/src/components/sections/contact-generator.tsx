@@ -65,7 +65,7 @@ export function ContactGenerator() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative">
+    <section id="contact" className="py-16 sm:py-20 md:py-32 relative">
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="text-center mb-16">
           <motion.h2 
