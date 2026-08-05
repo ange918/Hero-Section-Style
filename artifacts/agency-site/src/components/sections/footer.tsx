@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import logo from '@/assets/logo.jpg';
 
 export function Footer() {
   return (
@@ -6,9 +6,9 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-                <div className="w-3 h-3 bg-background rounded-sm rotate-45" />
+            <div className="flex items-center gap-2.5 mb-6">
+              <div className="w-10 h-10 rounded-full overflow-hidden bg-black flex items-center justify-center ring-1 ring-white/10 shrink-0">
+                <img src={logo} alt="JRC Digit" className="w-full h-full object-contain" />
               </div>
               <span className="heading-wavy text-2xl tracking-tight">JRC DIGIT</span>
             </div>

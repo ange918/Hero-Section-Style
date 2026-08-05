@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/theme-provider';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Link } from 'wouter';
+import logo from '@/assets/logo.jpg';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,9 +44,9 @@ export function Navbar() {
             : 'bg-transparent border-transparent'
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 z-50">
-            <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-              <div className="w-3 h-3 bg-background rounded-sm rotate-45" />
+          <Link href="/" className="flex items-center gap-2.5 z-50">
+            <div className="w-9 h-9 rounded-full overflow-hidden bg-black flex items-center justify-center ring-1 ring-white/10 shrink-0">
+              <img src={logo} alt="JRC Digit" className="w-full h-full object-contain" />
             </div>
             <span className="heading-wavy text-xl tracking-tight">JRC DIGIT</span>
           </Link>

@@ -4,18 +4,18 @@ import { Sparkles, Target, Zap } from 'lucide-react';
 const pillars = [
   {
     icon: Target,
-    title: 'Strategy First',
-    description: 'Every pixel serves a purpose. We start with sharp positioning before a single frame is designed.'
+    title: 'Le sur-mesure d\'abord',
+    description: 'Pas de modèles préconçus ni de solutions génériques. Nous concevons des solutions taillées pour votre réalité et vos objectifs.'
   },
   {
     icon: Sparkles,
-    title: 'Craft Obsessed',
-    description: 'We sweat the details others skip — the micro-interactions, the kerning, the load times.'
+    title: 'Une valeur mesurable',
+    description: 'Chaque interface dessinée et chaque ligne de code écrite visent un seul but : résoudre un problème précis et apporter un résultat concret.'
   },
   {
     icon: Zap,
-    title: 'Built to Move',
-    description: 'Fast teams, faster iterations. We ship work that performs the day it goes live.'
+    title: 'Sur tout le cycle',
+    description: 'Du MVP au déploiement : développement web & mobile, design UI/UX, audit, conseil et digitalisation de vos processus.'
   }
 ];
 
@@ -32,7 +32,7 @@ export function About() {
               viewport={{ once: true }}
               className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-6"
             >
-              About the Agency
+              À propos de JRC DIGIT
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -41,8 +41,8 @@ export function About() {
               transition={{ delay: 0.05 }}
               className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
             >
-              We Build Brands <br className="hidden md:block" />
-              That <span className="text-primary">Refuse to Blend In</span>
+              L'ingénierie digitale <br className="hidden md:block" />
+              au service de vos <span className="text-primary">ambitions</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -51,10 +51,10 @@ export function About() {
               transition={{ delay: 0.1 }}
               className="text-muted-foreground text-lg leading-relaxed mb-6"
             >
-              Founded on a simple belief — that mediocrity is invisible — JRC Digit is a
-              boutique creative studio pairing strategic rigor with fearless design. We
-              partner with ambitious teams to turn bold ideas into unforgettable digital
-              experiences.
+              Dans un monde où tout se digitalise à grande vitesse, une simple présence en
+              ligne ne suffit plus. Le vrai défi : transformer une idée ou un problème
+              complexe en une solution digitale fluide, performante et réellement adaptée
+              aux réalités du terrain.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -63,8 +63,10 @@ export function About() {
               transition={{ delay: 0.15 }}
               className="text-muted-foreground text-lg leading-relaxed"
             >
-              No bloated retainers, no account-manager telephone game. You work directly
-              with the people doing the work — and it shows in everything we ship.
+              C'est pour répondre à cette problématique que JRC DIGIT voit le jour. Nous ne
+              croyons pas aux solutions génériques, mais à la puissance du sur-mesure :
+              chaque ligne de code et chaque interface ont un seul objectif — apporter une
+              valeur mesurable à votre activité.
             </motion.p>
           </div>
 
