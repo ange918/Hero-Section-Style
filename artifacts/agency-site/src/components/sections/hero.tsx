@@ -33,8 +33,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-[clamp(1.75rem,8vw,7rem)] font-hero font-semibold text-white uppercase leading-[1.05] tracking-tight mb-8 max-w-full md:max-w-[1200px] break-words"
         >
-          Construire <br className="hidden md:block" />
-          ce qui compte
+          Nous construisons <br className="hidden md:block" />
+          l'inoubliable
         </motion.h1>
 
         {/* Centered subheading */}
