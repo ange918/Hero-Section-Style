@@ -9,10 +9,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 150, suffix: '+', label: 'Projects Delivered' },
-  { value: 12, label: 'Years of Craft' },
-  { value: 40, suffix: '+', label: 'Global Brands' },
-  { value: 98, suffix: '%', label: 'Client Retention' }
+  { value: 150, suffix: '+', label: 'Projets livrés' },
+  { value: 12, label: "Années d'expertise" },
+  { value: 40, suffix: '+', label: 'Clients accompagnés' },
+  { value: 98, suffix: '%', label: 'Clients fidèles' }
 ];
 
 function useCountUp(target: number, active: boolean, duration = 1800) {

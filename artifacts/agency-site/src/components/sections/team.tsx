@@ -7,17 +7,17 @@ import team3 from '@/assets/team-3.jpg';
 const team = [
   {
     name: 'Marcus Vance',
-    role: 'Creative Director',
+    role: 'Directeur Créatif',
     image: team1,
   },
   {
     name: 'Elena Rostova',
-    role: 'Lead Designer',
+    role: 'Designer Principale',
     image: team2,
   },
   {
     name: 'David Chen',
-    role: 'Technical Director',
+    role: 'Directeur Technique',
     image: team3,
   }
 ];
@@ -36,7 +36,7 @@ export function Team() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
-            The <span className="text-primary">Minds</span> Behind
+            Les <span className="text-primary">Esprits</span> Derrière
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export function Team() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            A small, elite squad of digital artisans. We don't hire account managers; you work directly with the talent.
+            Une équipe restreinte d'artisans du digital. Pas de chefs de projet intermédiaires : vous collaborez directement avec les personnes qui réalisent le travail.
           </motion.p>
         </div>
 

@@ -22,7 +22,7 @@ export function Hero() {
           className="mb-8"
         >
           <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur-md">
-            Creative Agency
+            Agence digitale
           </span>
         </motion.div>
 
@@ -33,8 +33,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-[clamp(1.75rem,8vw,7rem)] font-hero font-semibold text-white uppercase leading-[1.05] tracking-tight mb-8 max-w-full md:max-w-[1200px] break-words"
         >
-          Designing the <br className="hidden md:block" />
-          Unforgettable
+          Construire <br className="hidden md:block" />
+          ce qui compte
         </motion.h1>
 
         {/* Centered subheading */}
@@ -44,7 +44,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
         >
-          We are a fiercely modern creative agency building premium digital experiences for brands that refuse to blend in.
+          JRC DIGIT transforme vos idées et vos problèmes complexes en solutions digitales fluides, performantes et réellement adaptées aux réalités du terrain.
         </motion.p>
 
         {/* Two pill-shaped buttons */}
@@ -59,16 +59,16 @@ export function Hero() {
             className="rounded-full h-14 px-8 text-base bg-white text-[#5b4b96] hover:bg-white/90 hover:scale-105 transition-transform duration-300 font-semibold"
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Start a Project
+            Démarrer un projet
             <ChevronRight className="ml-2 w-5 h-5" />
           </Button>
-          <Button 
-            variant="glass" 
-            size="lg" 
+          <Button
+            variant="glass"
+            size="lg"
             className="rounded-full h-14 px-8 text-base text-white border-white/40 bg-transparent hover:bg-white/10 hover:scale-105 transition-transform duration-300"
             onClick={() => document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            View Our Work
+            Voir nos réalisations
           </Button>
         </motion.div>
       </div>

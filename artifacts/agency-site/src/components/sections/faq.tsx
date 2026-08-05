@@ -4,29 +4,29 @@ import { Plus } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What kinds of projects do you take on?',
+    question: 'Quels types de projets prenez-vous en charge ?',
     answer:
-      'We focus on brand identity, digital products (web & mobile apps), creative marketing sites, and social content. If it needs strategy and craft in equal measure, it\'s our kind of project.'
+      'Nous intervenons sur le développement web & mobile sur-mesure (SaaS, plateformes métier, outils internes), le design UI/UX, ainsi que l\'audit, le conseil et la digitalisation de processus. Si un projet demande à la fois de la stratégie et de la rigueur technique, c\'est le nôtre.'
   },
   {
-    question: 'How much does a project cost?',
+    question: 'Combien coûte un projet ?',
     answer:
-      'Engagements typically start around $10k for focused work and scale to $100k+ for comprehensive brand and product builds. We scope every project individually — build a brief in our project generator and we\'ll send a tailored proposal.'
+      'Les engagements démarrent généralement autour de 10 k€ pour un périmètre ciblé et vont au-delà de 100 k€ pour des plateformes complètes. Chaque projet est chiffré individuellement — construisez votre brief dans notre générateur et nous vous enverrons une proposition sur-mesure.'
   },
   {
-    question: 'How long does a typical engagement take?',
+    question: 'Combien de temps dure un projet type ?',
     answer:
-      'Most projects run between 1 and 4 months depending on scope. We work in fast, iterative sprints so you see real progress every week rather than a big reveal at the end.'
+      'La plupart des projets s\'étalent sur 1 à 4 mois selon le périmètre. Nous travaillons en sprints rapides et itératifs : vous constatez de réels progrès chaque semaine plutôt qu\'une grande révélation à la fin.'
   },
   {
-    question: 'Do we work directly with the designers?',
+    question: 'Travaille-t-on directement avec les développeurs ?',
     answer:
-      'Always. We don\'t hire account managers — you collaborate directly with the strategists and designers doing the work. Fewer layers, sharper output.'
+      'Toujours. Nous ne recrutons pas de chefs de projet intermédiaires — vous collaborez directement avec les personnes qui conçoivent et réalisent votre solution. Moins d\'intermédiaires, un résultat plus net.'
   },
   {
-    question: 'What happens after launch?',
+    question: 'Que se passe-t-il après le lancement ?',
     answer:
-      'We can hand off clean, documented deliverables to your team or stay on for ongoing iteration and support. Whatever keeps the work performing at its best.'
+      'Nous pouvons livrer à votre équipe des livrables propres et documentés, ou rester à vos côtés pour l\'itération et le support continus. L\'important : que votre solution reste performante dans le temps.'
   }
 ];
 
@@ -43,7 +43,7 @@ export function FAQ() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
-            Frequently <span className="text-primary">Asked</span>
+            Questions <span className="text-primary">Fréquentes</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function FAQ() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            Everything you need to know before we start building together.
+            Tout ce qu'il faut savoir avant de construire ensemble.
           </motion.p>
         </div>
 

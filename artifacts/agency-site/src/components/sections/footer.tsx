@@ -13,7 +13,7 @@ export function Footer() {
               <span className="heading-wavy text-2xl tracking-tight">JRC DIGIT</span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
-              A fiercely modern creative agency building premium digital experiences for brands that refuse to blend in.
+              L'ingénierie digitale au service de vos ambitions. Nous transformons vos idées en solutions sur-mesure, performantes et réellement adaptées au terrain.
             </p>
             <div className="flex gap-4">
               {['Twitter', 'Instagram', 'Dribbble', 'LinkedIn'].map((social) => (
@@ -31,10 +31,15 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-6 font-display tracking-wide uppercase text-sm">Navigation</h4>
             <ul className="space-y-4">
-              {['Work', 'Services', 'Agency', 'Careers'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors">
-                    {link}
+              {[
+                { label: 'Réalisations', href: '#work' },
+                { label: 'Services', href: '#services' },
+                { label: 'Agence', href: '#agency' },
+                { label: 'Contact', href: '#contact' },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -42,7 +47,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 font-display tracking-wide uppercase text-sm">Offices</h4>
+            <h4 className="font-bold mb-6 font-display tracking-wide uppercase text-sm">Bureaux</h4>
             <ul className="space-y-6">
               <li>
                 <strong className="block mb-1">San Francisco</strong>
@@ -57,10 +62,10 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-4 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} JRC Digit. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} JRC Digit. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-foreground transition-colors">Politique de confidentialité</a>
+            <a href="#" className="hover:text-foreground transition-colors">Conditions d'utilisation</a>
           </div>
         </div>
       </div>

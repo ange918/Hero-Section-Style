@@ -6,31 +6,31 @@ import { ChevronRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 const steps = [
   {
     id: 'goal',
-    question: "What's the main objective?",
+    question: "Quel est l'objectif principal ?",
     options: [
-      { id: 'brand', label: 'Brand Identity', desc: 'Build a new brand or rebrand an existing one' },
-      { id: 'product', label: 'Digital Product', desc: 'Design a web or mobile application' },
-      { id: 'web', label: 'Creative Website', desc: 'A stunning marketing or portfolio site' },
-      { id: 'marketing', label: 'Campaign & Social', desc: 'Engaging content and social strategy' }
+      { id: 'product', label: 'Produit digital', desc: 'Une application web ou mobile sur-mesure' },
+      { id: 'platform', label: 'Plateforme métier', desc: 'SaaS ou outil de gestion interne' },
+      { id: 'web', label: 'Site vitrine', desc: 'Un site marketing ou portfolio percutant' },
+      { id: 'audit', label: 'Audit & Digitalisation', desc: 'Automatiser et moderniser vos processus' }
     ]
   },
   {
     id: 'budget',
-    question: "What's your budget range?",
+    question: "Quelle est votre enveloppe budgétaire ?",
     options: [
-      { id: '10k', label: '$10k - $25k', desc: 'Seed & MVP stage' },
-      { id: '25k', label: '$25k - $50k', desc: 'Growth & scaling stage' },
-      { id: '50k', label: '$50k - $100k', desc: 'Established companies' },
-      { id: '100k+', label: '$100k+', desc: 'Enterprise & global scale' }
+      { id: '10k', label: '10 k€ - 25 k€', desc: 'Amorçage & MVP' },
+      { id: '25k', label: '25 k€ - 50 k€', desc: 'Croissance & montée en charge' },
+      { id: '50k', label: '50 k€ - 100 k€', desc: 'Entreprises établies' },
+      { id: '100k+', label: '100 k€+', desc: 'Grands comptes & envergure internationale' }
     ]
   },
   {
     id: 'timeline',
-    question: "How fast do you need this?",
+    question: "Dans quels délais ?",
     options: [
-      { id: 'asap', label: 'ASAP', desc: 'Within 1-2 months' },
-      { id: 'standard', label: 'Standard', desc: '3-4 months' },
-      { id: 'flexible', label: 'Flexible', desc: 'No strict deadline' }
+      { id: 'asap', label: 'Urgent', desc: 'Sous 1 à 2 mois' },
+      { id: 'standard', label: 'Standard', desc: '3 à 4 mois' },
+      { id: 'flexible', label: 'Flexible', desc: 'Pas d\'échéance stricte' }
     ]
   }
 ];
@@ -74,7 +74,7 @@ export function ContactGenerator() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-4"
           >
-            Start a <span className="text-primary">Project</span>
+            Démarrer un <span className="text-primary">Projet</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export function ContactGenerator() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            Skip the generic forms. Build your project brief in 30 seconds.
+            Oubliez les formulaires génériques. Construisez votre brief en 30 secondes.
           </motion.p>
         </div>
 
@@ -139,16 +139,16 @@ export function ContactGenerator() {
                       disabled={currentStep === 0}
                       className={currentStep === 0 ? 'opacity-0' : ''}
                     >
-                      <ArrowLeft className="w-4 h-4 mr-2" /> Back
+                      <ArrowLeft className="w-4 h-4 mr-2" /> Retour
                     </Button>
-                    
-                    <Button 
-                      size="lg" 
+
+                    <Button
+                      size="lg"
                       onClick={handleNext}
                       disabled={!answers[steps[currentStep].id]}
                       className="rounded-full px-8"
                     >
-                      Next Step <ChevronRight className="w-4 h-4 ml-2" />
+                      Étape suivante <ChevronRight className="w-4 h-4 ml-2" />
                     </Button>
                   </div>
                 </motion.div>
@@ -161,13 +161,13 @@ export function ContactGenerator() {
                   transition={{ duration: 0.4 }}
                 >
                   <div className="text-center mb-10">
-                    <h3 className="text-3xl heading-wavy mb-4">Brief generated.</h3>
-                    <p className="text-muted-foreground">Review your brief and tell us where to send the proposal.</p>
+                    <h3 className="text-3xl heading-wavy mb-4">Brief généré.</h3>
+                    <p className="text-muted-foreground">Vérifiez votre brief et indiquez-nous où envoyer la proposition.</p>
                   </div>
 
                   <div className="bg-background/50 border border-border rounded-2xl p-6 mb-10 max-w-2xl mx-auto space-y-4">
                     <div className="flex justify-between items-center border-b border-border pb-4">
-                      <span className="text-muted-foreground">Objective</span>
+                      <span className="text-muted-foreground">Objectif</span>
                       <span className="font-bold">{steps[0].options.find(o => o.id === answers.goal)?.label}</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-border pb-4">
@@ -175,7 +175,7 @@ export function ContactGenerator() {
                       <span className="font-bold">{steps[1].options.find(o => o.id === answers.budget)?.label}</span>
                     </div>
                     <div className="flex justify-between items-center pb-2">
-                      <span className="text-muted-foreground">Timeline</span>
+                      <span className="text-muted-foreground">Délai</span>
                       <span className="font-bold">{steps[2].options.find(o => o.id === answers.timeline)?.label}</span>
                     </div>
                   </div>
@@ -184,18 +184,18 @@ export function ContactGenerator() {
                     <input 
                       type="email" 
                       required
-                      placeholder="Enter your work email"
+                      placeholder="Entrez votre e-mail professionnel"
                       className="flex-1 bg-background border border-border rounded-full px-6 h-12 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                       value={email}
                       onChange={e => setEmail(e.target.value)}
                     />
                     <Button type="submit" size="lg" className="rounded-full h-12 px-8 shrink-0">
-                      Send Brief
+                      Envoyer le brief
                     </Button>
                   </form>
                   <div className="text-center mt-6">
                      <Button variant="ghost" onClick={handlePrev}>
-                        <ArrowLeft className="w-4 h-4 mr-2" /> Modify answers
+                        <ArrowLeft className="w-4 h-4 mr-2" /> Modifier mes réponses
                      </Button>
                   </div>
                 </motion.div>
@@ -210,9 +210,9 @@ export function ContactGenerator() {
                 <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-3xl heading-wavy mb-4">Transmission Received.</h3>
+                <h3 className="text-3xl heading-wavy mb-4">Brief bien reçu.</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Your brief is in our hands. Our directors will review it and reach out to {email} within 24 hours.
+                  Votre brief est entre nos mains. Notre équipe l'étudie et vous recontacte à {email} sous 24 heures.
                 </p>
               </motion.div>
             )}
