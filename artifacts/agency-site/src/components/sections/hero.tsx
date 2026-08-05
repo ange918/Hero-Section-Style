@@ -13,7 +13,7 @@ export function Hero() {
         <div className="absolute bottom-[-15%] left-[20%] w-[50vw] h-[50vw] bg-[#e9e4ff] rounded-full blur-[130px] opacity-30" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+      <div className="container relative z-20 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
         {/* Tracked-out label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
