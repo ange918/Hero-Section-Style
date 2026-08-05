@@ -28,7 +28,7 @@ export function CTA() {
             transition={{ delay: 0.1 }}
             className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur-md mb-8"
           >
-            Let's Build Something
+            Passons à l'action
           </motion.span>
 
           <motion.h2
@@ -38,7 +38,7 @@ export function CTA() {
             transition={{ delay: 0.15 }}
             className="text-[clamp(2rem,7vw,4.5rem)] font-hero font-semibold text-white uppercase leading-[1.05] tracking-tight mb-6 max-w-4xl mx-auto break-words"
           >
-            Ready to Be Unforgettable?
+            Prêt à concrétiser votre projet ?
           </motion.h2>
 
           <motion.p
@@ -48,7 +48,7 @@ export function CTA() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-medium leading-relaxed"
           >
-            Tell us where you want to go. We'll build the brand and product to get you there.
+            Dites-nous où vous voulez aller. Nous construisons la solution digitale qui vous y mènera.
           </motion.p>
 
           <motion.div
@@ -63,7 +63,7 @@ export function CTA() {
               className="rounded-full h-14 px-8 text-base bg-white text-[#5b4b96] hover:bg-white/90 hover:scale-105 transition-transform duration-300 font-semibold"
               onClick={() => scrollTo('#contact')}
             >
-              Start a Project
+              Démarrer un projet
               <ChevronRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
@@ -72,7 +72,7 @@ export function CTA() {
               className="rounded-full h-14 px-8 text-base text-white border-white/40 bg-transparent hover:bg-white/10 hover:scale-105 transition-transform duration-300"
               onClick={() => scrollTo('#work')}
             >
-              View Our Work
+              Voir nos réalisations
             </Button>
           </motion.div>
         </motion.div>

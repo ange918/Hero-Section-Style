@@ -26,7 +26,7 @@ const projects = [
   {
     id: 3,
     title: 'Volt Energy',
-    category: 'Social Media',
+    category: 'Réseaux sociaux',
     image: work3,
     color: 'from-yellow-500/20 to-red-500/20'
   },
@@ -53,17 +53,17 @@ const projects = [
   }
 ];
 
-const categories = ['All', 'Branding', 'Digital', 'UI/UX', 'Social Media'];
+const categories = ['Tous', 'Branding', 'Digital', 'UI/UX', 'Réseaux sociaux'];
 
 export function Work() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Tous');
 
   const filteredProjects = projects.filter(
-    (p) => activeCategory === 'All' || p.category === activeCategory
+    (p) => activeCategory === 'Tous' || p.category === activeCategory
   );
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-secondary/40">
+    <section id="work" className="py-16 sm:py-20 md:py-32 bg-secondary/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
@@ -73,7 +73,7 @@ export function Work() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-4"
             >
-              Selected <span className="text-primary">Work</span>
+              Nos <span className="text-primary">Réalisations</span>
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export function Work() {
               transition={{ delay: 0.1 }}
               className="text-muted-foreground text-lg max-w-lg"
             >
-              A curated selection of our finest digital craft.
+              Une sélection de nos meilleurs projets digitaux.
             </motion.p>
           </div>
           

@@ -5,30 +5,30 @@ import { Quote, ArrowLeft, ArrowRight } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      "JRC Digit didn't just redesign our brand — they gave us a point of view. Our conversion rate nearly doubled within the first quarter.",
+      "JRC DIGIT n'a pas seulement refait notre marque — ils nous ont donné un vrai point de vue. Notre taux de conversion a presque doublé dès le premier trimestre.",
     name: 'Sarah Lindqvist',
-    role: 'CMO, Nexus Fintech',
+    role: 'Directrice Marketing, Nexus Fintech',
     initials: 'SL'
   },
   {
     quote:
-      "Working directly with the designers changed everything. No middlemen, no diluted vision. Just sharp, fearless work delivered fast.",
+      "Travailler directement avec les développeurs a tout changé. Pas d'intermédiaires, pas de vision diluée. Un travail précis, ambitieux et livré rapidement.",
     name: 'Tomás Herrera',
-    role: 'Founder, Aura Fashion',
+    role: 'Fondateur, Aura Fashion',
     initials: 'TH'
   },
   {
     quote:
-      "They treat craft like a competitive advantage. Every detail was obsessed over, and it shows in how customers respond to the product.",
+      "Ils traitent le sur-mesure comme un véritable avantage compétitif. Chaque détail a été soigné, et cela se ressent dans la manière dont nos clients utilisent le produit.",
     name: 'Priya Raman',
-    role: 'Head of Product, Volt Energy',
+    role: 'Responsable Produit, Volt Energy',
     initials: 'PR'
   },
   {
     quote:
-      "The most switched-on creative team we've partnered with. Strategy, design, and execution all under one very talented roof.",
+      "L'équipe la plus affûtée avec laquelle nous ayons collaboré. Stratégie, design et exécution réunis sous un même toit, avec un talent rare.",
     name: 'Marcus Bennett',
-    role: 'CEO, Synthetix',
+    role: 'PDG, Synthetix',
     initials: 'MB'
   }
 ];
@@ -62,7 +62,7 @@ export function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2
@@ -71,7 +71,7 @@ export function Testimonials() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
-            What Our <span className="text-primary">Clients</span> Say
+            Ce que disent nos <span className="text-primary">Clients</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export function Testimonials() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            We measure success by the results we create — and the partners who keep coming back.
+            Nous mesurons notre succès aux résultats que nous créons — et aux partenaires qui nous font confiance sur la durée.
           </motion.p>
         </div>
 
@@ -123,7 +123,7 @@ export function Testimonials() {
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={() => paginate(-1)}
-              aria-label="Previous testimonial"
+              aria-label="Témoignage précédent"
               className="w-11 h-11 rounded-full border border-border bg-card/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-card transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -135,7 +135,7 @@ export function Testimonials() {
                 <button
                   key={t.name}
                   onClick={() => goTo(i)}
-                  aria-label={`Go to testimonial ${i + 1}`}
+                  aria-label={`Aller au témoignage ${i + 1}`}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
                     i === index ? 'w-8 bg-primary' : 'w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60'
                   }`}
@@ -145,7 +145,7 @@ export function Testimonials() {
 
             <button
               onClick={() => paginate(1)}
-              aria-label="Next testimonial"
+              aria-label="Témoignage suivant"
               className="w-11 h-11 rounded-full border border-border bg-card/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-card transition-colors"
             >
               <ArrowRight className="w-5 h-5" />

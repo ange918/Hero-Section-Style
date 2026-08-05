@@ -4,33 +4,27 @@ import founder from '@/assets/founder.png';
 const services = [
   {
     number: '01',
-    title: 'Brand Identity',
-    description: 'We craft iconic brand systems that demand attention and command authority. From logo marks to comprehensive visual languages.',
-    tags: ['Logo Design', 'Visual Strategy', 'Typography', 'Brand Guidelines']
+    title: 'Développement Web & Mobile',
+    description: 'Applications SaaS, plateformes métier et outils de gestion internes, portés par des architectures modernes, rapides et ultra-sécurisées. Une conduite de projet axée sur la fluidité et l\'accessibilité mobile.',
+    tags: ['Applications SaaS', 'Plateformes métier', 'Outils internes', 'Mobile-first']
   },
   {
     number: '02',
-    title: 'Digital Products',
-    description: 'Sleek, high-performance web and mobile applications designed with obsessive attention to user experience and interface craft.',
-    tags: ['UI/UX Design', 'Web Apps', 'Mobile Apps', 'Design Systems']
+    title: 'UI/UX Design & Expérience',
+    description: 'Des interfaces élégantes, intuitives et centrées sur l\'utilisateur. Maquettage, prototypage et identité visuelle forte, avec une optimisation des parcours pour maximiser la conversion et l\'engagement.',
+    tags: ['UI/UX Design', 'Maquettage', 'Prototypage', 'Identité visuelle']
   },
   {
     number: '03',
-    title: 'Creative Web',
-    description: 'Immersive promotional sites and landing pages that use motion, 3D, and scroll storytelling to captivate audiences.',
-    tags: ['Framer', 'Three.js', 'Webflow', 'Creative Development']
-  },
-  {
-    number: '04',
-    title: 'Social & Content',
-    description: 'Fierce, fast-moving social campaigns and digital content that cuts through the noise and builds cult followings.',
-    tags: ['Campaign Strategy', 'Motion Graphics', 'Art Direction', 'Copywriting']
+    title: 'Audit, Conseil & Digitalisation',
+    description: 'Analyse de vos processus actuels pour identifier les goulots d\'étranglement, puis automatisation et création d\'outils spécifiques pour faire gagner du temps et de la fiabilité à vos équipes.',
+    tags: ['Audit de processus', 'Conseil', 'Automatisation', 'Digitalisation']
   }
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="services" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
       {/* Portrait background with darkening overlay for legibility */}
       <div className="absolute inset-0 z-0">
         <img
@@ -44,7 +38,7 @@ export function Services() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-24 mb-20">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-24 mb-12 md:mb-20">
           <div className="flex-1 md:max-w-md">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -52,7 +46,7 @@ export function Services() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6 text-white"
             >
-              Our <span className="text-primary">Capabilities</span>
+              Nos <span className="text-primary">Pôles d'Expertise</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -61,7 +55,7 @@ export function Services() {
               transition={{ delay: 0.1 }}
               className="text-white/70 text-lg"
             >
-              We don't do full-service mediocrity. We do specific things with extraordinary precision and style.
+              Nous vous accompagnons sur l'ensemble du cycle de vie de vos projets numériques, avec une seule exigence : la précision.
             </motion.p>
           </div>
         </div>
