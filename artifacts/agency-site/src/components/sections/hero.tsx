@@ -1,16 +1,23 @@
+import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ChevronRight } from 'lucide-react';
 
+// Lazy-load the WebGL metaballs so three.js ships in its own chunk and the
+// hero content paints without waiting on it.
+const MetaballsBackground = lazy(() =>
+  import('@/components/metaballs-background').then((m) => ({ default: m.MetaballsBackground }))
+);
+
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-[#8b7ec0] pt-20">
-      {/* Soft pastel lavender/purple blurred blobs */}
+      {/* Lavender gradient base with animated WebGL metaballs on top */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-[#a89bd9] via-[#8f81c4] to-[#6f5fa8]" />
-        <div className="absolute -top-[10%] -left-[10%] w-[55vw] h-[55vw] bg-[#4b3d85] rounded-full blur-[110px] opacity-60" />
-        <div className="absolute top-[10%] right-[5%] w-[60vw] h-[60vw] bg-white rounded-full blur-[140px] opacity-40" />
-        <div className="absolute bottom-[-15%] left-[20%] w-[50vw] h-[50vw] bg-[#e9e4ff] rounded-full blur-[130px] opacity-30" />
+        <Suspense fallback={null}>
+          <MetaballsBackground className="absolute inset-0" />
+        </Suspense>
       </div>
 
       <div className="container relative z-20 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
