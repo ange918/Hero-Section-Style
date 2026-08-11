@@ -44,15 +44,15 @@ export function Navbar() {
             : 'bg-transparent border-transparent'
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 z-50">
+          <Link href="/" className="flex items-center gap-2.5 z-50 shrink-0">
             <div className="w-9 h-9 rounded-full overflow-hidden bg-black flex items-center justify-center ring-1 ring-white/10 shrink-0">
               <img src={logo} alt="JRC Digit" className="w-full h-full object-contain" />
             </div>
-            <span className="heading-wavy text-xl tracking-tight">JRC DIGIT</span>
+            <span className="heading-wavy text-xl tracking-tight whitespace-nowrap">JRC DIGIT</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -69,7 +69,7 @@ export function Navbar() {
           </nav>
 
           {/* Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
@@ -83,7 +83,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="flex md:hidden items-center gap-4 z-50">
+          <div className="flex lg:hidden items-center gap-4 z-50">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 text-muted-foreground"
@@ -107,7 +107,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 mt-2 mx-4 p-6 glass rounded-3xl md:hidden flex flex-col gap-6"
+            className="absolute top-full left-0 right-0 mt-2 mx-4 p-6 glass rounded-3xl lg:hidden flex flex-col gap-6"
           >
             {navLinks.map((link) => (
               <a
