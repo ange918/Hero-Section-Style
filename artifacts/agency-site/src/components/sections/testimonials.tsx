@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ArrowLeft, ArrowRight } from 'lucide-react';
+import { LabelPill, GhostWord } from '@/components/section-decor';
 
 const testimonials = [
   {
@@ -63,8 +64,10 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="py-16 sm:py-20 md:py-32 relative overflow-hidden">
+      <GhostWord className="top-8 left-1/2 -translate-x-1/2 text-[20vw]">Avis</GhostWord>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
+          <LabelPill>Témoignages</LabelPill>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

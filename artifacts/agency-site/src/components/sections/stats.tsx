@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { LabelPill, GhostWord } from '@/components/section-decor';
 
 interface Stat {
   value: number;
@@ -46,7 +47,7 @@ function StatItem({ stat, active, delay }: { stat: Stat; active: boolean; delay:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.6 }}
-      className="text-center"
+      className="text-center rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl px-4 py-8 shadow-[0_8px_32px_rgba(20,10,40,0.10)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
     >
       <div className="text-5xl md:text-6xl font-hero font-semibold text-primary mb-3 tabular-nums">
         {stat.prefix}
@@ -67,8 +68,12 @@ export function Stats() {
   return (
     <section id="stats" className="py-16 sm:py-20 md:py-28 relative overflow-hidden border-y border-border">
       <div className="absolute inset-0 bg-primary/[0.03] pointer-events-none" />
+      <GhostWord className="-top-2 left-1/2 -translate-x-1/2 text-[20vw]">Chiffres</GhostWord>
       <div ref={ref} className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8">
+        <div className="text-center mb-12">
+          <LabelPill className="mb-0">En chiffres</LabelPill>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, i) => (
             <StatItem key={stat.label} stat={stat} active={inView} delay={i * 0.1} />
           ))}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LabelPill, GhostWord } from '@/components/section-decor';
 
 import work1 from '@/assets/work-1.jpg';
 import work2 from '@/assets/work-2.jpg';
@@ -63,11 +64,13 @@ export function Work() {
   );
 
   return (
-    <section id="work" className="py-16 sm:py-20 md:py-32 bg-secondary/40">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="work" className="py-16 sm:py-20 md:py-32 bg-secondary/40 relative overflow-hidden">
+      <GhostWord className="top-6 -right-4 text-[20vw]">Projets</GhostWord>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
-            <motion.h2 
+            <LabelPill>Portfolio</LabelPill>
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

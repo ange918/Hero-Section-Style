@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import founder from '@/assets/founder.png';
+import { LabelPill, GhostWord } from '@/components/section-decor';
 
 const services = [
   {
@@ -37,9 +38,13 @@ export function Services() {
         <div className="absolute inset-0 bg-black/40 md:bg-transparent" />
       </div>
 
+      {/* Ghost word echoing the hero */}
+      <GhostWord className="top-6 -left-4 text-[22vw] from-white/10">Expertise</GhostWord>
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24 mb-12 md:mb-20">
           <div className="flex-1 md:max-w-md">
+            <LabelPill className="border-white/20 bg-white/10 text-white/80">Nos services</LabelPill>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +65,7 @@ export function Services() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.number}
@@ -68,14 +73,17 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group flex gap-6"
+              className="group flex gap-5 rounded-3xl border border-white/15 bg-white/[0.07] p-6 backdrop-blur-xl shadow-[0_8px_32px_rgba(10,5,25,0.35)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="text-sm font-bold text-primary pt-2 shrink-0">{service.number}</div>
+              {/* Dark clay number tile (echoes the hero widget) */}
+              <div className="shrink-0 w-14 h-14 rounded-2xl bg-[#1a1430] text-white flex items-center justify-center font-hero font-semibold text-lg shadow-lg">
+                {service.number}
+              </div>
               <div>
-                <h3 className="text-2xl heading-wavy tracking-tight mb-4 text-white group-hover:text-primary transition-colors">
+                <h3 className="text-xl md:text-2xl heading-wavy tracking-tight mb-3 text-white group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-white/70 mb-6 leading-relaxed">
+                <p className="text-white/70 mb-5 leading-relaxed">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
