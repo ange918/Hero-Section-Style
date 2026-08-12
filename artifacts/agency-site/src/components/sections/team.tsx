@@ -3,50 +3,25 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { LabelPill, GhostWord } from '@/components/section-decor';
 
+import team1 from '@/assets/team-1.jpg';
+import team2 from '@/assets/team-2.jpg';
+import team3 from '@/assets/team-3.jpg';
+
 interface Member {
   name: string;
   role: string;
-  bio: string;
-  accent: string; // tailwind gradient stops for the card border / avatar
+  image: string;
 }
 
+// NOTE: photos are placeholders (only 3 stock images available, reused).
+// Replace `image` with the real portraits when provided.
 const team: Member[] = [
-  {
-    name: 'Ange Akonde',
-    role: 'CEO & Stratégie',
-    bio: "Fixe le cap et l'exigence. Chaque projet part d'une vision claire avant la première ligne de code.",
-    accent: 'from-[#a89bd9] to-[#6f5fa8]'
-  },
-  {
-    name: 'Elton Hounnou',
-    role: 'Lead Tech',
-    bio: 'Architecte des solutions : des bases modernes, rapides et sécurisées, pensées pour durer.',
-    accent: 'from-[#8f81c4] to-[#4b3d85]'
-  },
-  {
-    name: 'Ahouansè Léa',
-    role: 'Design UI/UX',
-    bio: 'Transforme la complexité en interfaces élégantes, intuitives et centrées sur l\'utilisateur.',
-    accent: 'from-[#c8b6ff] to-[#8f81c4]'
-  },
-  {
-    name: 'Sylvason',
-    role: 'Développement Full-Stack',
-    bio: 'Du front au back : des produits robustes livrés proprement, sprint après sprint.',
-    accent: 'from-[#9d8fd6] to-[#5b4b96]'
-  },
-  {
-    name: 'Alakè Ama',
-    role: 'Gestion de projet',
-    bio: 'Orchestre les livraisons et garde le lien direct avec vous, sans intermédiaire superflu.',
-    accent: 'from-[#b9a9e8] to-[#6f5fa8]'
-  },
-  {
-    name: 'Honorat Dariel',
-    role: 'Développement Mobile',
-    bio: 'Des applications fluides et accessibles, pensées mobile-first pour le terrain.',
-    accent: 'from-[#a89bd9] to-[#4b3d85]'
-  }
+  { name: 'Ange Akonde', role: 'CEO & Stratégie', image: team1 },
+  { name: 'Elton Hounnou', role: 'Lead Tech', image: team2 },
+  { name: 'Ahouansè Léa', role: 'Design UI/UX', image: team3 },
+  { name: 'Sylvason', role: 'Développement Full-Stack', image: team1 },
+  { name: 'Alakè Ama', role: 'Gestion de projet', image: team2 },
+  { name: 'Honorat Dariel', role: 'Développement Mobile', image: team3 }
 ];
 
 const AUTOPLAY_MS = 4500;
@@ -80,7 +55,7 @@ export function Team() {
     const abs = Math.abs(rel);
     const clamped = Math.max(-2, Math.min(2, rel));
     return {
-      transform: `translate(-50%, -50%) translateX(${clamped * 56}%) translateZ(${-abs * 180}px) rotateY(${-clamped * 38}deg) scale(${1 - abs * 0.12})`,
+      transform: `translate(-50%, -50%) translateX(${clamped * 52}%) translateZ(${-abs * 200}px) rotateY(${-clamped * 36}deg) scale(${1 - abs * 0.12})`,
       opacity: abs > 2 ? 0 : 1 - abs * 0.25,
       zIndex: 30 - abs,
       pointerEvents: abs > 2 ? 'none' : 'auto'
@@ -123,7 +98,7 @@ export function Team() {
 
         {/* 3D coverflow carousel */}
         <div
-          className="relative h-[440px] sm:h-[460px] [perspective:1400px]"
+          className="relative h-[500px] sm:h-[540px] [perspective:1500px]"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -136,28 +111,42 @@ export function Team() {
                   key={member.name}
                   onClick={() => setActive(i)}
                   style={cardStyle(rel)}
-                  className="absolute top-1/2 left-1/2 w-[300px] sm:w-[340px] cursor-pointer transition-all duration-500 ease-out"
+                  className="absolute top-1/2 left-1/2 w-[300px] sm:w-[360px] cursor-pointer transition-all duration-500 ease-out"
                   aria-hidden={!isActive}
                 >
-                  {/* Gradient border wrapper */}
-                  <div className={`rounded-[1.75rem] p-[1.5px] bg-gradient-to-br ${member.accent} ${isActive ? 'shadow-[0_25px_70px_rgba(75,61,133,0.55)]' : 'shadow-[0_15px_40px_rgba(20,10,50,0.45)]'}`}>
-                    <div className="relative rounded-[1.7rem] bg-[#120f2b] overflow-hidden p-8 h-[400px] flex flex-col">
-                      {/* soft top glow */}
-                      <div className={`absolute -top-16 left-1/2 -translate-x-1/2 w-56 h-56 rounded-full bg-gradient-to-br ${member.accent} opacity-25 blur-3xl pointer-events-none`} />
+                  <div
+                    className={`relative rounded-[1.75rem] overflow-hidden h-[440px] sm:h-[480px] border border-white/15 bg-muted ${
+                      isActive
+                        ? 'shadow-[0_30px_80px_rgba(75,61,133,0.6)] ring-1 ring-primary/40'
+                        : 'shadow-[0_18px_45px_rgba(20,10,50,0.5)]'
+                    }`}
+                  >
+                    {/* Fallback initials behind the photo */}
+                    <div className="absolute inset-0 -z-0 flex items-center justify-center bg-gradient-to-br from-[#2a2350] to-[#120f2b] text-white/50 font-hero font-semibold text-5xl">
+                      {initials(member.name)}
+                    </div>
 
-                      <div className="relative">
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${member.accent} flex items-center justify-center text-white font-hero font-semibold text-2xl shadow-lg mb-6`}>
-                          {initials(member.name)}
-                        </div>
-                        <h3 className="text-2xl heading-wavy text-white mb-1">{member.name}</h3>
-                        <p className="text-primary font-medium mb-5">{member.role}</p>
-                        <p className="text-white/65 leading-relaxed">{member.bio}</p>
-                      </div>
+                    {/* Big photo */}
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+                        isActive ? 'grayscale-0' : 'grayscale'
+                      }`}
+                      onError={(e) => {
+                        e.currentTarget.style.opacity = '0';
+                      }}
+                    />
 
-                      <div className="mt-auto pt-6 flex items-center gap-2 text-white/40 text-xs font-semibold uppercase tracking-[0.2em]">
-                        <span className="w-8 h-px bg-white/25" />
-                        JRC Digit
-                      </div>
+                    {/* Bottom scrim + info */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+                      <span className="inline-block mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-primary/25 text-white backdrop-blur-md border border-white/15">
+                        {member.role}
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl heading-wavy text-white leading-tight">
+                        {member.name}
+                      </h3>
                     </div>
                   </div>
                 </div>
