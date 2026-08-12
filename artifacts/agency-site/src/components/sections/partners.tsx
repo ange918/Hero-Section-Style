@@ -35,7 +35,7 @@ export function Partners() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
             Ils nous font <span className="text-primary">confiance</span>
@@ -43,7 +43,7 @@ export function Partners() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
@@ -57,7 +57,7 @@ export function Partners() {
               key={partner.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: i * 0.12, duration: 0.6 }}
               className="glass rounded-3xl p-8 flex flex-col items-start gap-5 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
             >

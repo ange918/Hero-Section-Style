@@ -43,7 +43,7 @@ export function FAQ() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
             Questions <span className="text-primary">Fréquentes</span>
@@ -51,7 +51,7 @@ export function FAQ() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
@@ -67,7 +67,7 @@ export function FAQ() {
                 key={faq.question}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ delay: i * 0.05, duration: 0.5 }}
                 className={`glass rounded-2xl overflow-hidden transition-colors duration-300 ${
                   isOpen ? 'border-primary/40' : ''

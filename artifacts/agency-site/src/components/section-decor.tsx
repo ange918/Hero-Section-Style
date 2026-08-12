@@ -19,7 +19,7 @@ export function LabelPill({
     <motion.span
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.2 }}
       className={`inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-6 ${className}`}
     >
       {children}

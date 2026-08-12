@@ -45,7 +45,7 @@ function StatItem({ stat, active, delay }: { stat: Stat; active: boolean; delay:
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.2 }}
       transition={{ delay, duration: 0.6 }}
       className="text-center rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl px-4 py-8 shadow-[0_8px_32px_rgba(20,10,40,0.10)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
     >

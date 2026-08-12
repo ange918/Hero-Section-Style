@@ -48,7 +48,7 @@ export function Services() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6 text-white"
             >
               Nos <span className="text-primary">Pôles d'Expertise</span>
@@ -56,7 +56,7 @@ export function Services() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: 0.1 }}
               className="text-white/70 text-lg"
             >
@@ -71,7 +71,7 @@ export function Services() {
               key={service.number}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="group flex gap-5 rounded-3xl border border-white/15 bg-white/[0.07] p-6 backdrop-blur-xl shadow-[0_8px_32px_rgba(10,5,25,0.35)] hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
             >

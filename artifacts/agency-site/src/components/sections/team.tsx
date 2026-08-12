@@ -80,7 +80,7 @@ export function Team() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
           >
             Les <span className="text-primary">Esprits</span> Derrière
@@ -88,7 +88,7 @@ export function Team() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >

@@ -31,7 +31,7 @@ export function About() {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-primary mb-6"
             >
               À propos de JRC DIGIT
@@ -39,7 +39,7 @@ export function About() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: 0.05 }}
               className="text-4xl md:text-5xl heading-wavy uppercase tracking-tight mb-6"
             >
@@ -49,7 +49,7 @@ export function About() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: 0.1 }}
               className="text-muted-foreground text-lg leading-relaxed mb-6"
             >
@@ -61,7 +61,7 @@ export function About() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ delay: 0.15 }}
               className="text-muted-foreground text-lg leading-relaxed"
             >
@@ -79,7 +79,7 @@ export function About() {
                 key={pillar.title}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ delay: i * 0.12, duration: 0.6 }}
                 className="glass rounded-2xl p-6 flex gap-5 items-start hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
               >
