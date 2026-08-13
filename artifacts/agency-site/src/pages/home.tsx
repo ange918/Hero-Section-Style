@@ -5,6 +5,7 @@ import { Stats } from '@/components/sections/stats';
 import { Work } from '@/components/sections/work';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Team } from '@/components/sections/team';
+import { Partners } from '@/components/sections/partners';
 import { FAQ } from '@/components/sections/faq';
 import { ContactGenerator } from '@/components/sections/contact-generator';
 import { CTA } from '@/components/sections/cta';
@@ -14,13 +15,14 @@ export function Home() {
   return (
     <div className="w-full overflow-hidden">
       <Hero />
-      <div className="relative z-10 bg-background">
+      <div className="relative z-10">
         <About />
         <Services />
         <Stats />
         <Work />
         <Testimonials />
         <Team />
+        <Partners />
         <FAQ />
         <CTA />
         <ContactGenerator />

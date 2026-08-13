@@ -6,6 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import founder from '@/assets/founder.png';
 
 gsap.registerPlugin(ScrollTrigger);
+// Never clamp progress on slow frames — otherwise a heavy background (the
+// WebGL tunnel) can starve the rAF loop and leave the "from" (hidden) state
+// stuck on screen. With lag smoothing off, the entrance always resolves.
+gsap.ticker.lagSmoothing(0);
 
 const expertise = ['Web', 'Mobile', 'UI/UX', 'Audit', 'Automatisation'];
 
@@ -59,11 +63,11 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="relative min-h-[100dvh] flex items-center overflow-hidden bg-[#8b7ec0] pt-20"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20"
     >
-      {/* Lavender gradient base */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#a89bd9] via-[#8f81c4] to-[#6f5fa8]" />
-      <div className="absolute -top-[10%] -left-[10%] w-[45vw] h-[45vw] bg-white rounded-full blur-[140px] opacity-30 z-0 pointer-events-none" />
+      {/* Transparent over the site-wide tunnel background; a soft radial scrim
+          keeps the left content readable over the wormhole. */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_35%_50%,rgba(5,3,15,0.78),rgba(5,3,15,0.25)_55%,transparent_75%)]" />
 
       {/* Giant ghost brand text */}
       <div
@@ -82,7 +86,7 @@ export function Hero() {
             className="h-full w-auto mx-auto rounded-t-[2.5rem] object-cover object-top border border-white/10 drop-shadow-[0_30px_60px_rgba(25,12,50,0.55)]"
           />
           {/* legibility scrim behind the left/right copy */}
-          <div className="absolute inset-0 rounded-t-[2.5rem] bg-gradient-to-r from-[#6f5fa8]/50 via-transparent to-[#6f5fa8]/40" />
+          <div className="absolute inset-0 rounded-t-[2.5rem] bg-gradient-to-r from-[#05030f]/60 via-transparent to-[#05030f]/40" />
         </div>
       </div>
 
@@ -91,15 +95,15 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
           {/* Left column */}
           <div className="max-w-xl">
-            <span className="gsap-hero label block text-xs font-semibold uppercase tracking-[0.25em] text-white/80 mb-6">
+            <span className="gsap-hero label block text-xs font-semibold uppercase tracking-[0.25em] text-white/90 mb-6 [text-shadow:0_2px_10px_rgba(0,0,0,0.6)]">
               | Agence digitale
             </span>
-            <h1 className="gsap-hero text-[clamp(2rem,6vw,4.5rem)] font-hero font-semibold text-white uppercase leading-[1.02] tracking-tight mb-6 break-words">
+            <h1 className="gsap-hero text-[clamp(2rem,6vw,4.5rem)] font-hero font-semibold text-white uppercase leading-[1.02] tracking-tight mb-6 break-words [text-shadow:0_2px_20px_rgba(0,0,0,0.6)]">
               Nous construisons <br className="hidden sm:block" />
-              <span className="text-white/60">l'inoubliable</span>
+              <span className="text-[#8fe6ff]">l'inoubliable</span>
             </h1>
 
-            <div className="gsap-hero flex items-center gap-3 text-sm font-medium text-white/85 mb-10">
+            <div className="gsap-hero flex items-center gap-3 text-sm font-medium text-white/95 mb-10 [text-shadow:0_2px_10px_rgba(0,0,0,0.6)]">
               <span className="tracking-[0.15em] text-[#f5d98b]">★★★★★</span>
               +40 clients accompagnés
             </div>
@@ -174,7 +178,7 @@ export function Hero() {
       </div>
 
       {/* Hero footer bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-[15] h-16 flex items-center justify-between px-4 md:px-8 text-xs font-medium text-white/70 bg-gradient-to-t from-[#4b3d85]/80 to-transparent">
+      <div className="absolute bottom-0 left-0 right-0 z-[15] h-16 flex items-center justify-between px-4 md:px-8 text-xs font-medium text-white/70 bg-gradient-to-t from-[#05030f]/85 to-transparent">
         <span className="hidden sm:inline">• Développement Web &amp; Mobile</span>
         <span>• Design &amp; UX</span>
         <span>• Défiler ↓</span>
