@@ -15,7 +15,7 @@ export function Home() {
   return (
     <div className="w-full overflow-hidden">
       <Hero />
-      <div className="relative z-10 bg-background">
+      <div className="relative z-10">
         <About />
         <Services />
         <Stats />
